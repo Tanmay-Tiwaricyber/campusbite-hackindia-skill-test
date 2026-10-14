@@ -9,7 +9,7 @@ A lightweight, responsive HTML/CSS/JavaScript project built to make one everyday
 ## 🔗 Links
 
 - **Live demo:** `ADD_YOUR_DEPLOYED_URL_HERE`
-- **GitHub repository:** `ADD_YOUR_PUBLIC_REPO_URL_HERE`
+- **GitHub repository:** `https://github.com/Tanmay-Tiwaricyber/campusbite-hackindia-skill-test`
 - **Screenshots:** Add screenshots in `assets/` and embed them here.
 
 ## ✨ Features
@@ -33,7 +33,7 @@ A lightweight, responsive HTML/CSS/JavaScript project built to make one everyday
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/YOUR_USERNAME/campusbite.git
+   git clone https://github.com/Tanmay-Tiwaricyber/campusbite-hackindia-skill-test.git
    cd campusbite
    ```
 
