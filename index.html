@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#166534">
+  <meta name="description" content="CampusBite helps hostel students check the daily mess menu in one simple, shareable page.">
+  <title>CampusBite — Today's mess menu</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="CampusBite home">
+      <span class="brand-mark" aria-hidden="true">🍽</span>
+      <span>Campus<span class="brand-accent">Bite</span></span>
+    </a>
+    <a class="top-link" href="#weekly-menu">View menu <span aria-hidden="true">↘</span></a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="live-dot"></span> YOUR HOSTEL MESS, AT A GLANCE</p>
+        <h1>Good food.<br><span>Zero guessing.</span></h1>
+        <p class="hero-description">Check what's cooking today before you head to the mess. One clear menu, ready to share with your hostel group.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#weekly-menu">See today's menu <span aria-hidden="true">↓</span></a>
+          <button class="button button-secondary" id="share-button" type="button">Share menu <span aria-hidden="true">↗</span></button>
+        </div>
+        <p class="updated-note"><span aria-hidden="true">◷</span> Sample menu · Update this demo with your hostel's actual meals</p>
+      </div>
+      <div class="hero-card" aria-label="Today's menu preview">
+        <div class="card-topline">
+          <span class="today-label">TODAY'S SPECIAL</span>
+          <span class="sun-icon" aria-hidden="true">☀</span>
+        </div>
+        <div class="meal-illustration" aria-hidden="true">
+          <div class="plate">
+            <span class="food food-rice"></span><span class="food food-curry"></span>
+            <span class="food food-roti"></span><span class="food food-salad"></span>
+          </div>
+        </div>
+        <h2 id="special-title">Comfort food, sorted.</h2>
+        <p id="special-description">A balanced plate to power through your campus day.</p>
+        <div class="preview-tags"><span>Freshly listed</span><span>Student-friendly</span></div>
+      </div>
+      <div class="hero-decoration decoration-one"></div>
+      <div class="hero-decoration decoration-two"></div>
+    </section>
+
+    <section class="menu-section" id="weekly-menu">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">THE DAILY LINEUP</p>
+          <h2>What's on the menu?</h2>
+          <p class="section-description">Pick a day to see the planned meals.</p>
+        </div>
+        <label class="day-picker-wrap" for="day-picker">
+          <span>MENU DAY</span>
+          <select id="day-picker" aria-label="Choose menu day">
+            <option value="0">Monday</option><option value="1">Tuesday</option>
+            <option value="2">Wednesday</option><option value="3">Thursday</option>
+            <option value="4">Friday</option><option value="5">Saturday</option>
+            <option value="6">Sunday</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="meal-grid" id="meal-grid" aria-live="polite">
+        <article class="meal-card"><div class="meal-icon breakfast">☕</div><p class="meal-time">7:30–9:00 AM</p><h3>Breakfast</h3><p class="meal-items">Poha, banana, tea</p></article>
+        <article class="meal-card"><div class="meal-icon lunch">🍛</div><p class="meal-time">12:30–2:00 PM</p><h3>Lunch</h3><p class="meal-items">Dal, rice, roti, seasonal sabzi</p></article>
+        <article class="meal-card"><div class="meal-icon snacks">🥪</div><p class="meal-time">5:00–6:00 PM</p><h3>Evening snacks</h3><p class="meal-items">Veg sandwich, chai</p></article>
+        <article class="meal-card"><div class="meal-icon dinner">🌙</div><p class="meal-time">7:30–9:00 PM</p><h3>Dinner</h3><p class="meal-items">Paneer curry, roti, salad</p></article>
+      </div>
+      <p class="menu-disclaimer"><span aria-hidden="true">ⓘ</span> Demo data only. Confirm meal timings and menu with your hostel administration.</p>
+    </section>
+
+    <section class="share-banner">
+      <div class="share-icon" aria-hidden="true">↗</div>
+      <div><h2>Make the group chat useful.</h2><p>Share this page so everyone knows what's being served.</p></div>
+      <button class="button button-light" id="share-button-bottom" type="button">Share CampusBite</button>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand footer-brand" href="#"><span class="brand-mark" aria-hidden="true">🍽</span><span>Campus<span class="brand-accent">Bite</span></span></a>
+    <p>Made for campus life. <span>© <span id="year"></span> CampusBite</span></p>
+    <a href="#weekly-menu">Back to menu ↑</a>
+  </footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
